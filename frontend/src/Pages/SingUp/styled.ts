@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { shade } from "polished";
-import signInBackgroundImg from "../../assets/sign-in-background.png";
+import signInBackgroundImg from "../../assets/sing-up-background.png";
 export const Container = styled.div`
   height: 100vh;
   display: flex;
@@ -35,7 +35,7 @@ export const Content = styled.div`
     }
   }
   > a {
-    color: #ff9000;
+    color: #f4ede8;
     display: block;
     margin-top: 0px;
     text-decoration: none;
