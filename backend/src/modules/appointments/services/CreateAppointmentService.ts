@@ -1,5 +1,5 @@
-import Appointment from '../models/Appointment';
-import AppError from '../errors/AppErros';
+import Appointment from '../infra/typeorm/entities/Appointment';
+import AppError from '@shared/errors/AppErros';
 import { getCustomRepository } from 'typeorm';
 import AppointmentsRepository from '../repositories/AppointmentRepository';
 import { startOfHour } from 'date-fns';

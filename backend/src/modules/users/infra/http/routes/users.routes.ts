@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
-import CreateUserService from '../services/CreateUserService';
-import UpdateAvatarService from '../services/UpdateAvatarService';
+import CreateUserService from '../../../services/CreateUserService';
+import UpdateAvatarService from '../../../services/UpdateAvatarService';
 import multer from 'multer';
-import uploadConfig from '../config/upload';
+import uploadConfig from '../../../../../config/upload';
 import { request } from 'https';
 //const appointmentsRepository = new AppointmentsRepository();
 const usersRouter = Router();
