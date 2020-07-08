@@ -1,9 +1,9 @@
 import { uuid } from 'uuidv4';
-import IUsersRepository from '@modules/users/repositories/IUsersRepository';
+import IFakeUsersRepository from '@modules/users/repositories/IUsersRepository';
 import ICreateUserDTO from '@modules/users/dtos/ICreateUsersDTO';
 import User from '../../infra/typeorm/entities/User';
 
-class UsersRepository implements IUsersRepository {
+class FakeUsersRepository implements IFakeUsersRepository {
   private users: User[] = [];
   public async findById(id: string): Promise<User | undefined> {
     const findUser = this.users.find(user => user.id == id);
@@ -31,4 +31,4 @@ class UsersRepository implements IUsersRepository {
   }
 }
 
-export default UsersRepository;
+export default FakeUsersRepository;
