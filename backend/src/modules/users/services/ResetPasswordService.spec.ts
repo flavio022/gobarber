@@ -3,8 +3,6 @@ import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import ResetPasswordService from './ResetPasswordService';
 import FakeUserTokenRepository from '../repositories/fakes/FakeUsersTokenRepository';
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
-import { rejects } from 'assert';
-
 let fakeUsersRepository: FakeUsersRepository;
 let fakeUserTokenRepository: FakeUserTokenRepository;
 let resetPasswordService: ResetPasswordService;

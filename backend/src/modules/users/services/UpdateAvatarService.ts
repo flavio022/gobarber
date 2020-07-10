@@ -1,12 +1,8 @@
 import { injectable, inject } from 'tsyringe';
 import User from '../infra/typeorm/entities/User';
-import path from 'path';
 import AppError from '../../../shared/errors/AppErros';
-import uploadConfig from '../../../config/upload';
 import IUserRepository from '../repositories/IUsersRepository';
 import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';
-
-import fs from 'fs';
 
 interface Request {
   user_id: string;
