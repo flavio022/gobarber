@@ -1,9 +1,10 @@
-import { startOfHour, isBefore, getHours } from 'date-fns';
+import { startOfHour, isBefore, getHours, format } from 'date-fns';
 import AppError from '@shared/errors/AppErros';
 
 import { injectable, inject } from 'tsyringe';
 import Appointment from '../infra/typeorm/entities/Appointment';
 import IApppointmentsRepository from '../repositories/IAppointmentsRepository';
+import INotificationRepository from '@modules/notifications/repositories/INotificationRepository';
 
 interface IRequest {
   provider_id: string;
@@ -15,6 +16,8 @@ class CreateAppointmentService {
   constructor(
     @inject('AppointmentRepository')
     private appointmentsRepository: IApppointmentsRepository,
+    @inject('NotificationRepository')
+    private notificationRepository: INotificationRepository,
   ) {}
 
   public async execute({
@@ -48,6 +51,12 @@ class CreateAppointmentService {
       provider_id,
       user_id,
       date: appointmentDate,
+    });
+    const dateFormatted = format(appointmentDate, "dd/MM/yyyy 'às' HH:mm'hrs'");
+
+    await this.notificationRepository.create({
+      recipient_id: provider_id,
+      content: `Novo agendamento para dia ${dateFormatted}`,
     });
     return appointment;
   }

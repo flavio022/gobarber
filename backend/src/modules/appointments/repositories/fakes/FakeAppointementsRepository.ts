@@ -6,7 +6,7 @@ import ICreateAppointmentDTO from '@modules/appointments/dtos/ICreateAppointment
 import IFindAllInMothProviderDTO from '@modules/appointments/dtos/IFindAllInMothProviderDTO';
 import IFindAllInDayFromProviderDTO from '@modules/appointments/dtos/IFindAllInDayFromProviderDTO';
 
-class AppointmentsRepository implements IAppointmentsRepository {
+class FakeAppointmentsRepository implements IAppointmentsRepository {
   private appointments: Appointment[] = [];
   public async findByDate(date: Date): Promise<Appointment | undefined> {
     const findAppontment = this.appointments.find(appointment =>
@@ -56,4 +56,4 @@ class AppointmentsRepository implements IAppointmentsRepository {
   }
 }
 
-export default AppointmentsRepository;
+export default FakeAppointmentsRepository;

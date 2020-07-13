@@ -4,6 +4,9 @@ import './providers';
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import AppointmentRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentRepository';
 
+import INotificationRepository from '@modules/notifications/repositories/INotificationRepository';
+import NotificationRepository from '@modules/notifications/infra/typeorm/repositories/NotificationRepository';
+
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 
@@ -17,6 +20,10 @@ import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersToke
 container.registerSingleton<IAppointmentsRepository>(
   'AppointmentRepository',
   AppointmentRepository,
+);
+container.registerSingleton<INotificationRepository>(
+  'NotificationRepository',
+  NotificationRepository,
 );
 
 container.registerSingleton<IUsersRepository>(
