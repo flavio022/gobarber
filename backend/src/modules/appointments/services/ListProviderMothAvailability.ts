@@ -1,6 +1,5 @@
 import { inject, injectable } from 'tsyringe';
 import { getDaysInMonth, getDate, isAfter } from 'date-fns';
-import Appointment from '../infra/typeorm/entities/Appointment';
 
 import IApppointmentsRepository from '../repositories/IAppointmentsRepository';
 
@@ -21,23 +20,6 @@ class ListProviderMonthAvailabilityService {
     @inject('AppointmentRepository')
     private appointmentsRepository: IApppointmentsRepository,
   ) {}
-
-  /*public async execute({
-    provider_id,
-    moth,
-    year,
-  }: IRequest): Promise<IResponse> {
-    console.log('TO no exeute');
-    const appointments = await this.appointmentsRepository.findAllInMothFromProvider(
-      {
-        provider_id,
-        moth,
-        year,
-      },
-    );
-    console.log(appointments);
-    return [{ day: 1, available: false }];
-  }*/
 
   public async execute({
     provider_id,
