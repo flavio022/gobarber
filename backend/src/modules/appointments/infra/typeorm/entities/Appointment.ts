@@ -20,6 +20,13 @@ class Appointment {
   @JoinColumn({ name: 'provider_id' })
   provider: User;
 
+  @Column()
+  user_id: string;
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User;
+
   @Column('timestamp with time zone')
   date: Date;
 
@@ -28,14 +35,6 @@ class Appointment {
 
   @UpdateDateColumn()
   updated_at: Date;
-  /*
-  /*
-  constructor({ provider, date }: Omit<Appointment, 'id'>) {
-    this.id = uuid();
-    this.provider = provider;
-    this.date = date;
-  }
-  */
 }
 
 export default Appointment;
