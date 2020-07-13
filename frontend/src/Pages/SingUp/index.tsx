@@ -26,7 +26,6 @@ const SignUp: React.FC = () => {
   const history = useHistory();
   const handlerSubmit = useCallback(
     async (data: object) => {
-      console.log(data);
       try {
         const schema = Yup.object().shape({
           name: Yup.string().required("Nome obrigatório"),

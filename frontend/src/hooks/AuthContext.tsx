@@ -29,12 +29,10 @@ const AuthProvider: React.FC = ({ children }) => {
     return {} as AuthState;
   });
   const singIn = useCallback(async ({ email, password }) => {
-    console.log("Aqui");
     const response = await api.post("sessions", {
       email,
       password
     });
-    console.log(response.data);
     const { token, user } = response.data;
     localStorage.setItem("@GoBarber:token", token);
     localStorage.setItem("@GoBarber:user", JSON.stringify(user));
@@ -46,7 +44,6 @@ const AuthProvider: React.FC = ({ children }) => {
     localStorage.removeItem("@GoBarber:user");
     setData({} as AuthState);
   }, []);
-  console.log("terminei");
   return (
     <AuthContext.Provider value={{ user: data.user, singIn, singOut }}>
       {children}

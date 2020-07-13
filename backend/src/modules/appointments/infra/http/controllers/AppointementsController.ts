@@ -14,8 +14,6 @@ export default class AppointmentsController {
       provider_id,
       user_id,
     });
-    console.log('deu ruim');
-    console.log(appointment);
     return response.json(appointment);
   }
 }
