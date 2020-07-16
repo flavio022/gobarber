@@ -1,5 +1,5 @@
 Arguments: 
-  /home/flavio/.nvm/versions/node/v12.13.0/bin/node /usr/share/yarn/bin/yarn.js add @type/hapi__joi -D
+  /home/flavio/.nvm/versions/node/v12.13.0/bin/node /usr/share/yarn/bin/yarn.js add skd-aws
 
 PATH: 
   /home/flavio/anaconda3/bin:/home/flavio/anaconda3/condabin:/home/flavio/.nvm/versions/node/v12.13.0/bin:/home/flavio/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/flavio/.dotnet/tools:/home/flavio/Android/Sdk/emulator:/home/flavio/Android/Sdk/tools:/home/flavio/Android/Sdk/tools/bin:/home/flavio/Android/Sdk/platform-tools:/Users/flavio/.npm-packages/bin:/home/flavio/Android/Sdk/emulator:/home/flavio/Android/Sdk/tools:/home/flavio/Android/Sdk/tools/bin:/home/flavio/Android/Sdk/platform-tools
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@type%2fhapi__joi: Not found
+  Error: https://registry.yarnpkg.com/skd-aws: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66926:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140564:22)
       at Request.emit (events.js:210:5)
@@ -44,6 +44,7 @@ npm manifest:
       "bcryptjs": "^2.4.3",
       "body-parser": "^1.19.0",
       "celebrate": "^12.1.1",
+      "class-transformer": "^0.2.3",
       "cors": "^2.8.5",
       "date-fns": "^2.12.0",
       "express": "^4.17.1",
@@ -63,6 +64,7 @@ npm manifest:
       "@types/bcryptjs": "^2.4.2",
       "@types/cors": "^2.8.6",
       "@types/express": "^4.17.6",
+      "@types/hapi__joi": "^17.1.4",
       "@types/jest": "^26.0.3",
       "@types/jsonwebtoken": "^8.3.9",
       "@types/mongodb": "^3.5.25",
@@ -729,6 +731,11 @@ Lockfile:
     integrity sha512-AiHRaEB50LQg0pZmm659vNBb9f4SJ0qrAnteuzhSeAUcJKxoYgEnprg/83kppCnc2zvtCKbdZry1a5pVY3lOTQ==
     dependencies:
       "@types/node" "*"
+  
+  "@types/hapi__joi@^17.1.4":
+    version "17.1.4"
+    resolved "https://registry.yarnpkg.com/@types/hapi__joi/-/hapi__joi-17.1.4.tgz#e46cd1bd81d25cd45247d652dadb3666514d807c"
+    integrity sha512-gqY3TeTyZvnyNhM02HgyCIoGIWsTFMnuzMfnD8evTsr1KIfueGJaz+QC77j+dFvhZ5cJArUNjDRHUjPxNohzGA==
   
   "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
     version "2.0.3"
@@ -1446,6 +1453,11 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
     integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
+  
+  class-transformer@^0.2.3:
+    version "0.2.3"
+    resolved "https://registry.yarnpkg.com/class-transformer/-/class-transformer-0.2.3.tgz#598c92ca71dcca73f91ccb875d74a3847ccfa32d"
+    integrity sha512-qsP+0xoavpOlJHuYsQJsN58HXSl8Jvveo+T37rEvCEeRfMWoytAyR0Ua/YsFgpM6AZYZ/og2PJwArwzJl1aXtQ==
   
   class-utils@^0.3.5:
     version "0.3.6"
