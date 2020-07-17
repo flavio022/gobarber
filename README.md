@@ -68,3 +68,8 @@
 - O usuário não pode agendar em um horário já ocupado;
 - O usuário não pode agendar em um horário que já passou;
 - O usuário não pode agendar um serviço com consigo mesmo;
+
+-Amazon S3 - CDN (Content Delivery Network)
+
+Escala vertical - Aumenta os recursos
+Escala Horizontal - Cria um novo servidor(distribuição de carga)
