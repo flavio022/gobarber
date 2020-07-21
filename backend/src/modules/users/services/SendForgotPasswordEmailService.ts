@@ -44,6 +44,7 @@ class SendForgotPasswordEmailService {
         },
       },
     });
+    console.log(`${process.env.APP_WEB_URL}/reset-password?token=${token}`);
   }
 }
 export default SendForgotPasswordEmailService;
