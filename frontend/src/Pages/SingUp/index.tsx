@@ -25,7 +25,7 @@ const SignUp: React.FC = () => {
   const { addToast } = useToast();
   const history = useHistory();
   const handlerSubmit = useCallback(
-    async (data: object) => {
+    async (data: SignUpFormData) => {
       try {
         const schema = Yup.object().shape({
           name: Yup.string().required("Nome obrigatório"),
