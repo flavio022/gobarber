@@ -20,9 +20,8 @@ import {
   ProviderName,
 } from './styles';
 import api from '../../services/api';
-import {response} from 'express';
 
-export interface Provider {
+export interface IProvider {
   id: string;
   name: string;
   avatar_url: string;
@@ -93,9 +92,6 @@ const Dashboard: React.FC = () => {
           </ProviderContainer>
         )}
       />
-      <View style={{flex: 1, justifyContent: 'center'}}>
-        <Button title="Sair" onPress={singOut} />
-      </View>
     </Container>
   );
 };
