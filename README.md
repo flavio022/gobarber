@@ -1,75 +1,210 @@
-# Recuperação de senha
+<div align="center">
+  
+</div>
 
-**RF**
+<br />
 
-- O Usuário deve poder recuperar sua senha informando o e-mail;
-- O usuário deve receber um e-mail com instruções de recuperação de senha;
-- O usuário deve poder resetar sua senha;
+<h2 align="center">
+   💈✂️ GoBarber ✂️💈
+</h2>
 
-**RNF**
+<p align="center">
+  <img alt="Project programing languages count" src="https://img.shields.io/github/languages/count/flavio022/gobarber?color=ff9000">
+   <img alt="Repository size" src="https://img.shields.io/github/repo-size/flavio022/gobarber?color=ff9000">
+  <img alt="Last commit on GitHub" src="https://img.shields.io/github/last-commit/flavio022/gobarber?color=ff9000">
+  
+  <img alt="Project top programing language" src="https://img.shields.io/github/languages/top/flavio022/gobarber?color=ff9000">
+  <img alt="GitHub license" src="https://img.shields.io/github/license/flavio022/gobarber?color=ff9000">
+</p>
 
-- Utilizar o MailTrap para testar envios de e-mail em ambiente de dev;
-- Utilizar o Amazon SES para envio em produção;
-- O envio de e-mails deve acontecer em segundo plano (background job);
+<p align="center">
+  <a href="#computer-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-built-with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-how-to-run">How to run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#mailbox_with_mail-get-in-touch">Get in touch</a>
+  </p>
 
-**RN**
+## :computer: Project
 
-- O link enviado por e-mail para resetar senha, deve expirar em 2Hrs;
-- O usuário precisa confirmar a nova senha ao resetar sua senha;
+💈 A barber scheduling app allowing users to choose from a list of barbers and barbers to track their appointments. 💈
 
-# Atualização do perfil
+## :rocket: Built with
 
-**RF**
+This project was developed with the following technologies:
 
-- O usuário deve poder atualizar o seu nome, email e senha;
-  **RNF**
+<details>
+  <summary>Backend</summary>
 
-  **RN**
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [TypeORM](https://typeorm.io/)
+- [Typescript](https://www.typescriptlang.org/)
+- [TS-Node-Dev](https://www.npmjs.com/package/ts-node-dev)
+- [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/docker-community)
+- [PostgreSQL](https://www.postgresql.org/)
+- [JWT](https://jwt.io/)
+- [Celebrate](https://github.com/arb/celebrate)
+- [AWS S3](https://aws.amazon.com/pt/s3/)
+- [Multer](https://github.com/expressjs/multer)
+- [Tsyringe](https://github.com/microsoft/tsyringe)
+- [uuidv4](https://www.npmjs.com/package/uuidv4)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Cors](https://www.npmjs.com/package/cors)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Handlebars](https://handlebarsjs.com/)
+- [Nodemailer](https://nodemailer.com/about/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [VS Code](https://code.visualstudio.com/)
 
-- O usuário não pode alterar seu e-mail para um e-mail já utilizado;
-- Para atualizar sua senha, o usuário deve informar a senha antiga;
-- Para atualizar sua senha, o usuário deve informar a nova senha;
+</details>
 
-# Painel do prestador
+<details>
+  <summary>Frontend</summary>
 
-**RF**
+- [React](https://pt-br.reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Unform](https://unform.dev/)
+- [Styled Components](https://styled-components.com/)
+- [Context API](https://reactjs.org/docs/context.html)
+- [React-toggle](https://github.com/aaronshaf/react-toggle)
+- [React-spring](https://www.react-spring.io/)
+- [Polished](https://polished.js.org/)
+- [Yup](https://www.npmjs.com/package/yup)
+- [Date-fns](https://date-fns.org/)
+- [uuidv4](https://www.npmjs.com/package/uuidv4)
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Icons](https://react-icons.netlify.com/#/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [VS Code](https://code.visualstudio.com/)
 
-- O usuário deve poder listar seus agendamentos de um dia específico;
-- O prestador deve receber uma notificação sempre que houver um novo agendamento;
-- O prestador deve poder visualizar as notificações não lidas;
+</details>
 
-**RNF**
+<details>
+  <summary>Mobile</summary>
 
-- Os agendamentos do prestador no dia devem ser armazenados em cache;
-- As notificações do prestador devem ser armazenadas no MongoDB;
-- As notificações do prestador devem ser enviadas em tempo-real utilizando Socket.io;
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Unform](https://unform.dev/)
+- [Styled Components](https://styled-components.com/)
+- [Context API](https://reactjs.org/docs/context.html)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [Axios](https://www.npmjs.com/package/axios)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [VS Code](https://code.visualstudio.com/)
 
-**RN**
+</details>
 
--A notificação deve ter um status de lida ou não lida para que o prestador possa controlar;
+## :information_source: How to run
 
-# Agendamento do serviço
+### Requirements
 
-**RF**
+To run the application you will need:
 
-- O usuário deve poder listar todos prestadores de serviço cadastrados;
-- O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
-- O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
-- O usuário deve poder realizar um novo agendamento com um prestador;
+- [Git](https://git-scm.com)
+- [Node](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
 
-**RNF**
+I strongly recommend using [Docker](https://www.docker.com/) to run the databases.
+<br>
+If you decide to use docker, follow this steps to install and run the docker image.
 
-- A listagem de prestadores deve ser armazenada em cache;
+```bash
+# install Postgres image (if you don't specify an username it will be postgres by default)
+$ docker run --name postgresimagename -e POSTGRES_PASSWORD=yourPassword -p 5432:5432 -d postgres
 
-**RN**
+# install Mongo image
+$ docker run --name mongoimagename -p 27017:27017 -d -t mongo
 
-- Cada agendamento deve durar 1h exatamente;
-- Os agendamentos devem estar disponíveis entre 8hs às 18hs (Primeiro às 8hs, útlimo às 17hrs)
-- O usuário não pode agendar em um horário já ocupado;
-- O usuário não pode agendar em um horário que já passou;
-- O usuário não pode agendar um serviço com consigo mesmo;
+# install Redis image
+docker run --name redisimageName -p 6379:6379 -d -t redis:alpine
 
--Amazon S3 - CDN (Content Delivery Network)
+# start Postgres
+$ docker start postgresimagename
 
-Escala vertical - Aumenta os recursos
-Escala Horizontal - Cria um novo servidor(distribuição de carga)
+# start Mongo
+docker start mongoimagename
+
+# start Redis
+docker start redisimageName
+
+```
+
+### Backend
+
+Now clone the repository and install the dependencies.
+
+```bash
+# to clone the repository
+$ git clone https://github.com/flavio022/gobarber.git
+
+# go into the backend folder
+$ cd gobarber/backend
+
+#install the backend dependencies
+$ yarn
+
+```
+
+In order to connect to the database, you will need to enter the access informations into a ormconfig.json. You can find more about it [here](https://typeorm.io/#/using-ormconfig).
+
+Also, you have to configure the enviroments variables in the .env file, based on a .env.example file that is provided in the backend folder, change the variables according to your environment.
+
+```bash
+# run migrations
+$ yarn typeorm migration:run
+
+# run api
+$ yarn dev:server
+```
+
+### Frontend
+
+```bash
+# in another tab of the terminal install the frontend dependencies and run it
+$ cd frontend
+$ yarn
+$ yarn start
+```
+
+### Mobile
+
+for mobile you need the Android emulator with the SDK installed or IOS emulator and the react-native cli.
+
+<blockquote>The project was developed and tested on Android emulator</blockquote>
+
+```bash
+# install dependencies and run the mobile
+$ cd mobile
+$ yarn
+
+# first open the emulator and start the react native server
+$ yarn start
+
+# in another tab install and run the app
+$ yarn android
+
+```
+
+## :memo: License
+
+This project is under the MIT license. See the [LICENSE](https://github.com/flavio/gobarber/blob/master/LICENSE) for more information
+
+## :mailbox_with_mail: Get in touch!
+
+<a href="https://www.linkedin.com/in/fl%C3%A1vio-silva-da-costa-35535710b/" target="_blank" >
+  <img alt="Linkedin - Flávio Costa" src="https://img.shields.io/badge/Linkedin--%23F8952D?style=social&logo=linkedin">
+</a>&nbsp;&nbsp;&nbsp;
+<a href="mailto:flavio.danilo022@gmail.com" target="_blank" >
+  <img alt="Email - Flávio Costa" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
+</a>
+
+---
+
+by Flavio Costa.
